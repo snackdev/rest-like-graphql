@@ -1,0 +1,32 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.3'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'snackdev.graphql'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// https://mvnrepository.com/artifact/org.projectlombok/lombok
+	implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+	annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
+	// https://mvnrepository.com/artifact/org.reflections/reflections
+	implementation group: 'org.reflections', name: 'reflections', version: '0.10.2'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.6.4'
+	// https://mvnrepository.com/artifact/com.h2database/h2
+	implementation group: 'com.h2database', name: 'h2', version: '2.1.210'
+}
+
+test {
+	useJUnitPlatform()
+}
